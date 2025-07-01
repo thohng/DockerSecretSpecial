@@ -1,0 +1,34 @@
+## Ignore for continuous deployment
+
+# Custom ignore
+_*.bat
+_*.cmd
+_*.sh
+_*.ps1
+*.pem
+*.pfx
+*.p12
+*.cer
+*.crt
+.vs/
+**/nginx/ssl_certs/**
+docker-compose.override.yml
+
+#Rclone
+rclone.exe
+.rclone.conf
+
+# Develop local
+/devops/vendikar/tailscale_local/**
+/devops/vendikar/tailscale_dev/**
+/conf/oidc/appsettings.json
+/conf/oidc/appsettings.*.json
+
+# Specical including
+!/devops/coridan/tailscale_spoke/docker-compose.override.yml
+
+# Terraform
+.terraform/
+.terraform.*
+.backend-config
+terraform/**/local-secrets.auto.tfvars
